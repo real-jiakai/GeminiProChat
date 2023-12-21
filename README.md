@@ -10,7 +10,7 @@ Live demo: [Gemini Pro Chat](https://www.geminiprochat.com)
 
 ### Deploy With Vercel(Recommended)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/babaohuang/GeminiProChat&env=GEMINI_API_KEY&envDescription=Google%20API%20Key%20for%20GeminiProChat&envLink=https://makersuite.google.com/app/apikey)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/babaohuang/GeminiProChat&env=GEMINI_API_KEY&envDescription=Google%20API%20Key%20for%20GeminiProChat&envLink=https://makersuite.google.com/app/apikey&project-name=gemini-pro-chat&repository-name=gemini-pro-chat&demo-title=Gemini%20Pro%20Chat&demo-description=Minimal%20web%20UI%20for%20Gemini%20Pro.&demo-url=https%3A%2F%2Fgeminiprochat.com&demo-image=https%3A%2F%2Fgeminiprochat.com%2Ficon.svg)
 
 Just click the button above and follow the instructions to deploy your own copy of the app.
 
@@ -25,9 +25,27 @@ Just click the button above and follow the instructions to deploy your own copy 
 >
 > Thanks to [**antergone**](https://github.com/antergone/palm-proxy) for providing this solution.
 
+### Deploy on Railway
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/v9QL5u?referralCode=tSzmIe)
+
+Just click the button above and follow the instructions to deploy on Railway.
+
 ### Deploy With Docker
 
-Although this project provides a Dockerfile, there is currently a known bug with the Docker deployment method. I am actively working on fixing this issue. Therefore, Docker deployment is not recommended at this moment. If any contributors have a solution to fix this bug, your contributions are highly welcomed. Please feel free to submit a Pull Request (PR) to help me resolve this issue.
+To deploy with Docker, you can use the following command:
+
+```bash
+docker run --name geminiprochat \
+--restart always \
+-p 3000:3000 \
+-itd \
+-e GEMINI_API_KEY=your_api_key_here \
+babaohuang/geminiprochat:latest
+```
+Please make sure to replace `your_api_key_here` with your own GEMINI API key.
+
+This will start the **geminiprochat** service, accessible at `http://localhost:3000`. 
 
 ## Environment Variables
 
